@@ -1,0 +1,40 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Hijau</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-emerald-700 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-bold tracking-wide">📚 PustakaHijau</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="/" class="hover:bg-emerald-600 px-3 py-2 rounded-md font-medium transition">Beranda</a>
+                    <a href="/katalog" class="hover:bg-emerald-600 px-3 py-2 rounded-md font-medium transition">Katalog & Pinjam</a>
+                    <a href="/pustakawan" class="hover:bg-emerald-600 px-3 py-2 rounded-md font-medium transition">Panel Pustakawan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 py-4 text-center text-sm">
+        <p>&copy; 2026 PustakaHijau. Dibuat dengan Flask & Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>

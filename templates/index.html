@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 sm:p-12 shadow-sm text-center">
+    <h1 class="text-4xl font-extrabold text-emerald-900 mb-4">Selamat Datang di PustakaHijau</h1>
+    <p class="text-lg text-emerald-700 max-w-2xl mx-auto mb-8">
+        Temukan buku favoritmu, pinjam dengan mudah secara online, dan perluas wawasanmu bersama kami.
+    </p>
+    <div class="flex justify-center space-x-4">
+        <a href="/katalog" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow transition">
+            Jelajahi Katalog Buku
+        </a>
+        <a href="/pustakawan" class="bg-white border border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-semibold px-6 py-3 rounded-xl shadow transition">
+            Kelola Pustakawan
+        </a>
+    </div>
+</div>
+{% endblock %}
